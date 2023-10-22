@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Update Profile</title>
+        <style>
+            body {
+                background-image: url("../static/userimg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100vh;
+                margin: 0;
+            }
+        
+            form {
+                background: lightsteelblue;
+                padding: 20px;
+                border: 2px solid black;
+                border-radius: 20px;
+                box-shadow: 10px 10px 15px black;
+                min-width: 400px;
+                max-width: 700px;                
+                text-align: center;
+            }
+        
+            h1 {
+                color: #000000;
+            }
+        
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border: 1px solid blueviolet;
+                border-radius: 3px;
+                outline:none;
+            }
+        
+            button {
+                background-color: rgb(211, 79, 123);
+                color: #ffffff;
+                padding: 18px;
+                font-size: 15px;
+                border: 1px solid white;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            button:hover {
+                background-color: #555;
+            }
+        
+            div {
+                padding-top: 10px;
+                font-size: 14px;
+                color: #666;
+            }
+        
+            a {
+                color: purple;
+                text-decoration: none;
+            }
+        
+            a:hover {
+                text-decoration: underline;
+            }
+            label {
+                float: left;
+                font-size: 20px;;
+                font-style: bold;
+                padding-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/update-profile" method="POST">
+            <h1>Update Profile</h1>
+            <label>Name</label><br>
+            <input type="text" name="name" placeholder="Enter your new Name:"/>
+            <label>Password</label><br>
+            <input type="password" name="password" placeholder="Enter your new Password"/>
+            <button>Save Changes</button>
+        </form>
+    </body>
+</html>

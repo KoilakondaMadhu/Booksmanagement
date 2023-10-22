@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Login Form</title>
+    </head>
+    <style>
+        body {
+            background-image: url("../static/addimg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+        }
+    
+        form {
+            background: lightblue;
+            padding: 20px;
+            border: 2px solid black;
+            box-shadow: 10px 10px 15px rgb(10, 143, 152);
+            min-width: 400px;
+            max-width: 700px; 
+            height: 400px;               
+            text-align: center;
+        }
+    
+        h1 {
+            color: #000000;
+            font-style: bold;
+        }
+    
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline:none;
+        }
+    
+        button {
+            width:120px;
+            font-size: 20px;
+            background-color: #1483ba;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+    
+        button:hover {
+            background-color: #555;
+        }
+    
+        div {
+            padding-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+    
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+        .line1{
+            margin-bottom:10px;
+            margin-top:5px;
+            color: black;
+        }
+        label {
+            float: left;
+            font-style: bold;
+            padding: 10px;
+        }
+    </style>
+    <body>
+        
+        <form action="/verify-login" method="POST">
+            <h1>Login Form</h1>
+            <label>Email: </label><br>
+            <input type="email" name="email" placeholder="Enter your Email"/>
+            <label>Password: </label><br>
+            <input type="password" name="password" placeholder="Enter your Password"/>
+            <button>Login</button>
+            <div class="line1" style="font-size:17px;">New Account? <a href="/register" style="color:rgb(248, 22, 22);margin-left:3px;">Register Here</a></div>
+
+            <a href="/admin-login" style="color:black;font-size:17px;text-decoration: underline;">Admin Login</a>
+        </form>
+    </body>
+</html>
